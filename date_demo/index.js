@@ -15,7 +15,7 @@ var options = {
     var text2 = val[1];
     var text3 = val[2];
 
-    nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+    nameEl.innerText = text1 + '年 ' + text2 + '月 ' + text3 + '日';
   }
 
 }

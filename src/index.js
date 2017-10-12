@@ -1,6 +1,6 @@
-import Picker from './picker/picker';
+import PickerDate from './picker/pickerDate';
 
 /* eslint-disable no-undef */
-Picker.version = __VERSION__;
+PickerDate.version = __VERSION__;
 
-export default Picker;
+export default PickerDate;

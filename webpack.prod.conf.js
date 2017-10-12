@@ -8,9 +8,9 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		library: 'Picker',
+		library: 'PickerDate',
 		libraryTarget: 'umd',
-		filename: '[name].min.js'
+		filename: '[name]Date.min.js'
 	},
 	module: {
 		preLoaders: [

@@ -100,10 +100,10 @@ export default class Picker extends EventEmitter {
     ((index) => {
       this.wheels[index].on('scrollEnd', () => {
         let currentIndex = this.wheels[index].getSelectedIndex();
-        // if (this.selectedIndex[i] !== currentIndex) {
+        if (this.selectedIndex[i] !== currentIndex) {
           this.selectedIndex[i] = currentIndex;
           this.trigger('picker.change', index, currentIndex);
-        // }
+        }
       });
     })(i);
     return this.wheels[i];

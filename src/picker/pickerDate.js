@@ -28,7 +28,7 @@
  *
  * Created by lichenyang on 2017/10/12.
  */
-import Picker from './picker';
+import Picker from 'better-picker';
 import getDate from '../util/getDate';
 
 export default class PickerDate {

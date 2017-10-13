@@ -2,4 +2,5 @@ build/*.js
 node_modules/*.js
 demo/*.js
 date_demo/*.js
+docs/*.js
 webpack.*.js

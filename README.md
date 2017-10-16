@@ -3,7 +3,7 @@
 简洁轻便好使的时间选择器。
 
 ## 依赖
-依赖better-picker.js=>better-croll.js,原生es6语法实现。
+依赖better-picker.js=>better-scroll.js,原生es6语法实现。
 
 ## 如何使用
 

@@ -25,18 +25,6 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'babel',
 				exclude: /node_modules/
-			},
-			{
-				test: /\.styl$/,
-				loader: 'style-loader!css-loader!stylus-loader'
-			},
-			{
-				test: /\.png|\.gif$/,
-				loader: 'url-loader?limit=8192'
-			},
-			{
-				test: /\.handlebars$/,
-				loader: "handlebars-loader"
 			}
 		]
 	},

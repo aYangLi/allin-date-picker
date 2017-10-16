@@ -1,8 +1,6 @@
-# picker
-
+# allin-date-picker
 
 简洁轻便好使的时间选择器。
-
 
 ## 依赖
 依赖better-picker.js=>better-croll.js,原生es6语法实现。

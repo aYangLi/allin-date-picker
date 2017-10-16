@@ -1,12 +1,16 @@
 /**
  * @Desc：基于better-picker的时间选择器；
  * @Usage:
- *          需要初始化选择器var picker = new PickerDate(options);
- *          var options = {
- *            startYear:1990,   开始时间
+            //需要初始化选择器
+            var picker = new PickerDate(options);
+            var options = {
+              startYear:1990,   开始时间
               lastYear:2020,    结束时间，不传默认为当前年份
               title: '日期选择',    选择器标题
               reset：true，//是否超出当前日期回滚到当前日期；
+              defaultYear:'1980',//默认选中的年份，不传则默认为结束时间
+              defaultMonth:'01',//默认选中的月份，不传则默认为01
+              defaultDay:'01',//默认选中的天，不传则默认为01
               changeFun:function (index,val) {
                   index（改变的是那一列；0-年；1-月；2-日）
                   val（改变那一列的索引值）
@@ -22,7 +26,7 @@
               cancelFun:function () {
                 当用户点击取消的时候触发
               }
- *          }
+            }
  * @Notify：
  * @Depend：better-picker.js
  *
@@ -55,8 +59,11 @@ export default class PickerDate {
     let dayData = getDate.getPickerArr(dayArr, '日');
     // 默认年月份的索引值
     let yearChange = this.options.defaultYear ? yearData.find((n) => n.text === this.options.defaultYear).value : 0;
+    this.yearChageIndex = yearChange;
     let monthChange = this.options.defaultMonth ? monthData.find((n) => n.text === this.options.defaultMonth).value : 0;
+    this.monthChangeIndex = monthChange;
     let dayChange = this.options.defaultDay ? dayData.find((n) => n.text === this.options.defaultDay).value : 0;
+    this.dayChangeIndex = dayChange;
     this.datePicker = new Picker({
       data: [yearData, monthData, dayData], // 初始化的数据
       selectedIndex: [yearChange, monthChange, dayChange] // 默认哪个选中
@@ -125,5 +132,15 @@ export default class PickerDate {
 
   show () {
     this.datePicker.show();
+  }
+
+  hide () {
+    this.datePicker.hide();
+  }
+
+  resetPosition () {
+    this.datePicker.selectedIndex[0] = this.yearChageIndex;
+    this.datePicker.selectedIndex[1] = this.monthChangeIndex;
+    this.datePicker.selectedIndex[2] = this.dayChangeIndex;
   }
 }

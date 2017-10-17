@@ -133,8 +133,8 @@ export default class PickerDate {
     });
   }
 
-  show () {
-    this.datePicker.show();
+  show (next) {
+    this.datePicker.show(next && next);
   }
 
   hide () {

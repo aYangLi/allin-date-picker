@@ -1,7 +1,7 @@
 {
   "name": "allin-date-picker",
   "version": "1.0.0",
-  "description": "h5 picker inspired by ios UIPickerView",
+  "description": "A simple time selector",
   "main": "dist/pickerDate.min.js",
   "scripts": {
     "dev": "webpack-dev-server --port 9090 --inline --hot --content-base ./demo --host 0.0.0.0",
@@ -19,11 +19,8 @@
     "date-picker",
     "allin"
   ],
-  "author": "aYangLi",
+  "author": "lichenyang",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/aYangLi/allin-date-picker/issues"
-  },
   "dependencies": {
     "babel-runtime": "^6.0.0",
     "better-scroll": "^0.1.15"

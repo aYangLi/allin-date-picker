@@ -73,6 +73,9 @@ export default class PickerDate {
       let valArr = [yearArr[returnArr[0]], monthArr[returnArr[1]], dayArr[returnArr[2]]];
       this.options.selectFun && this.options.selectFun(selectedIndex, valArr);
     });
+    this.datePicker.on('picker.cancel', () => {
+      this.options.cancelFun && this.options.cancelFun();
+    });
     this.datePicker.on('picker.valuechange', (selectedIndex, selectedVal) => {
       let returnArr = selectedVal.toString().split(',');
 //          console.log(yearData[returnArr[0]].value);

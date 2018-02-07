@@ -1,6 +1,6 @@
 {
   "name": "allin-date-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple time selector",
   "main": "dist/pickerDate.min.js",
   "scripts": {

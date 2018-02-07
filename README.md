@@ -100,3 +100,7 @@ npm run dev
 打开浏览器访问如下地址, 查看效果
 
 > localhost:9090
+
+线上 demo 访问，查看效果：
+
+[线上效果地址](http://www.yculcy.cn/allin-date-picker/)

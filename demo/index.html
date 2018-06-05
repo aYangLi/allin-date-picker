@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-  <title>筛选器服务器测试页</title>
+  <title>筛选器本地打开测试页</title>
   <link rel="stylesheet" type="text/css" href="reset.css">
 </head>
 <style>
@@ -13,7 +13,7 @@
     font-size: 20px;
     text-align: center;
   }
-  #chose {
+  .div-btn {
     width: 80%;
     height: 50px;
     border: 1px solid #ccc;
@@ -26,8 +26,10 @@
 </style>
 <body>
   <h3>Picker</h3>
-  <div id="chose">选择时间</div>
-  <script src="pickerDate.min.js"></script>
+  <div id="chose" class="div-btn">选择时间</div>
+  <div id="reset" class="div-btn">复位选择器</div>
+  <div id="restore" class="div-btn">超出回滚选择器</div>
+  <script src="./pickerDate.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

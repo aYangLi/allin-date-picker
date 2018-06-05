@@ -1,6 +1,6 @@
 # allin-date-picker
 
-简洁轻便好使的时间选择器。
+简洁轻便好使的时间选择器。(2.0版本修复了部分bug，参数更灵活。)
 
 ## 依赖
 依赖better-picker.js=>better-scroll.js,原生es6语法实现。
@@ -36,33 +36,34 @@ JS 部分：
 ```javascript
 var nameEl = document.getElementById('name');
 //需要初始化选择器
-var picker = new PickerDate(options);
 var options = {
-  startYear:1990,   开始时间
-  lastYear:2020,    结束时间，不传默认为当前年份
-  title: '日期选择',    选择器标题
-  reset：true，//是否超出当前日期回滚到当前日期；
-  defaultYear:'1980',//默认选中的年份，不传则默认为结束时间
-  defaultMonth:'01',//默认选中的月份，不传则默认为01
-  defaultDay:'01',//默认选中的天，不传则默认为01
-  changeFun:function (index,val) {
-      index（改变的是那一列；0-年；1-月；2-日）
-      val（改变那一列的索引值）
-  },//当一列滚动停止的时候
-  selectFun:function (index,val) {
-      index（选择的索引数组）
-      val（选择的值的数组）
-  }，//当用户点击确定的时候，
-  valueChangeFun: function (index,val){
-      index（选择的索引数组）
-      val（选择的值的数组）
-  }，当用户点击确定的时候，如果本次选择的数据和上一次不一致，
-  cancelFun:function () {
-    当用户点击取消的时候触发
-  }
+    startYear:1990,   // 开始时间(默认1980)
+    lastYear:2020,    // 结束时间，不传默认为当前年份
+    title: '',  // 选择器标题,默认空
+    reset：true, // 是否超出当前日期回滚到当前日期(默认false)；
+    defaultYear:1980,//默认选中的年份，不传则默认为当天
+    defaultMonth:1,//默认选中的月份，不传则默认为当天
+    defaultDay:1,//默认选中的天，不传则默认为当天
+    changeFun:function (index,val) {
+        //index（改变的是那一列；0-年；1-月；2-日）
+        //val（改变那一列的索引值）
+    },//当一列滚动停止的时候
+    selectFun:function (index,val) {
+       // index（选择的索引数组）
+        //val（选择的值的数组）
+    }，//当用户点击确定的时候，
+    valueChangeFun: function (index,val){
+        //index（选择的索引数组）
+       // val（选择的值的数组）
+    }，//当用户点击确定的时候，如果本次选择的数据和上一次不一致，
+    cancelFun:function () {
+      //当用户点击取消的时候触发
+    }
 }
+var picker = new PickerDate(options);
+
 nameEl.addEventListener('click', function () {
-	pickerDate.show();
+    pickerDate.show();
 });
 ```
 

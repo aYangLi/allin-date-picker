@@ -11,10 +11,6 @@
 class GetDate {
   // 获取年份数组，startYear为初始年数，lastYear为结束年数，如果不传lastYear，默认为当前年份
   getYear (startYear, lastYear) {
-    if (!lastYear) {
-      let dData = new Date();
-      lastYear = dData.getFullYear();
-    }
     if (startYear && lastYear) {
       startYear = parseInt(startYear);
       lastYear = parseInt(lastYear);
